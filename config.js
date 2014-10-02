@@ -14,6 +14,7 @@
  */
 
 var bunyan = require('bunyan');
+var logstash = require('bunyan-logstash');
 
 var config = module.exports.config = {};
 
@@ -118,6 +119,13 @@ config.log = {
         {
             'level': 'info',
             'stream': process.stdout
+        },
+        {
+            'type': 'raw',
+            'stream': logstash.createStream({
+                'host': '127.0.0.1',
+                'port': 5505
+            })
         }
     ],
     'serializers': {
