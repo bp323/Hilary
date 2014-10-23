@@ -24,6 +24,7 @@ before_install:
 
   # Install elastic search 1.1.1 manually
   - wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.deb && sudo dpkg -i --force-confnew elasticsearch-1.1.1.deb
+  - sudo service elasticsearch start
   - sudo service elasticsearch status
 
   # Install cassandra 1.2.16 manually
