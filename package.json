@@ -25,6 +25,7 @@
     "awssum-amazon-s3": "latest",
     "body-parser": "latest",
     "bunyan": "latest",
+    "bunyan-logstash": "latest",
     "cas-sfu": "git://github.com/nicolaasmatthijs/node-cas-sfu.git",
     "cheerio": "latest",
     "clone": "latest",
