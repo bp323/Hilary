@@ -33,7 +33,6 @@ before_install:
   - sudo sh -c "echo 'JVM_OPTS=\"\${JVM_OPTS} -Djava.net.preferIPv4Stack=false\"' >> /etc/cassandra/cassandra-env.sh"
   - sudo service cassandra stop
   - sudo service cassandra start
-  - sudo service cassandra status
 
   # Turn off unneeded services to free some memory
   - sudo service mysql stop
