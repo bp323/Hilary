@@ -14,7 +14,7 @@
  */
 
 var bunyan = require('bunyan');
-var logstash = require('bunyan-logstash');
+var logstash = require('bunyan-logstash-tcp');
 
 var config = module.exports.config = {};
 
