@@ -15,6 +15,8 @@
  * permissions and limitations under the License.
  */
 
+require('newrelic');
+
 var optimist = require('optimist');
 var argv = optimist.usage('$0 [--config <path/to/config.js>]')
     .alias('c', 'config')
@@ -27,14 +29,6 @@ var argv = optimist.usage('$0 [--config <path/to/config.js>]')
 
 var OAE = require('oae-util/lib/oae');
 var log = require('oae-logger').logger();
-
-// Initialize new relic stat tracking and provide a message in the logs when it
-// cannot be enabled
-try {
-   require('newrelic');
-} catch (e) {
-   log().info('New Relic could not be enabled and will not be tracking statistics');
-}
 
 if (argv.help) {
     optimist.showHelp();
