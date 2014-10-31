@@ -50,6 +50,7 @@
     "mkdirp": "latest",
     "multiparty": "latest",
     "natural": "latest",
+    "newrelic": "latest",
     "node-esapi": "latest",
     "node-zendesk": "latest",
     "nodemailer": "latest",
